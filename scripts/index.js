@@ -103,10 +103,8 @@ newCardPopup.addEventListener('click', () => {
 });
 
 function handleCardFormSubmit(evt) {
-    evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-    // Так мы можем определить свою логику отправки.
+    evt.preventDefault();
 
-    // Получите значение полей jobInput и nameInput из свойства value
     const location = cardLoc.value;
     const url = cardUrl.value;
 
