@@ -6,16 +6,16 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
 <div class="page__content">
   <header class="header page__section">
-    <img src="./images/logo.svg" alt="Логотип проекта место" class="logo header__logo">
+    <img src="<%=require('./images/logo.svg')%>" alt="Логотип проекта место" class="logo header__logo">
   </header>
   <main class="content">
     <section class="profile page__section">
-      <div class="profile__image" style="background-image: url('./images/my-avatar.jpg');"></div>
+      <img class="profile__image" src="<%=require('./images/my-avatar.jpg')%>" alt="Profile Image">
+
       <div class="profile__info">
         <h1 class="profile__title">Жагло Игорь</h1>
         <button class="profile__edit-button" type="button"></button>
@@ -87,11 +87,5 @@
     </div>
   </li>
 </template>
-
-<script type="module" src="components/validate.js" defer></script>
-<script type="module" src="components/modal.js" defer></script>
-<script type="module" src="components/cards.js" defer></script>
-<script type="module" src="components/card.js" defer></script>
-<script type="module" src="components/index.js" defer></script>
 </body>
 </html>
