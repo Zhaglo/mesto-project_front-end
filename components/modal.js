@@ -14,13 +14,13 @@ function handleEscClose(evt) {
 function openModal(popup) {
     popup.classList.add('popup_is-opened');
 
-    popup.addEventListener('click', handleOverlayClose);
+    popup.addEventListener('mousedown', handleOverlayClose);
     document.addEventListener('keydown', handleEscClose);
 }
 
 function closeModal(popup) {
     popup.classList.remove('popup_is-opened');
-    popup.removeEventListener('click', handleOverlayClose);
+    popup.removeEventListener('mousedown', handleOverlayClose);
     document.removeEventListener('keydown', handleEscClose);
 }
 
