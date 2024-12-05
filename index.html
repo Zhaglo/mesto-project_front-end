@@ -38,8 +38,14 @@
       <button type="button" class="popup__close"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
       <form class="popup__form" name="edit-profile">
-        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" required>
-        <input type="text" name="description" class="popup__input popup__input_type_description" placeholder="Занятие" required>
+        <label class="popup__field">
+          <input type="text" name="name" class="popup__input popup__input_type_name" id="name-input" placeholder="Имя" minlength="2" maxlength="40" required>
+          <span class="popup__error name-input-error"></span>
+        </label>
+        <label class="popup__field">
+          <input type="text" name="description" class="popup__input popup__input_type_description" id="description-input" placeholder="Описание" minlength="2" maxlength="200" required>
+          <span class="popup__error description-input-error"></span>
+        </label>
         <button type="submit" class="button popup__button">Сохранить</button>
       </form>
     </div>
@@ -49,8 +55,14 @@
       <button type="button" class="popup__close"></button>
       <h3 class="popup__title">Новое место</h3>
       <form class="popup__form" name="new-place">
-        <input type="text" name="place-name" class="popup__input popup__input_type_card-name" placeholder="Название" required>
-        <input type="url" name="link" class="popup__input popup__input_type_url" placeholder="Ссылка на картинку" required>
+        <label class="popup__field">
+          <input type="text" name="place-name" class="popup__input popup__input_type_card-name" placeholder="Название" id="mesto-input" minlength="2" maxlength="30" required>
+          <span class="popup__error mesto-input-error"></span>
+        </label>
+        <label class="popup__field">
+          <input type="url" name="link" class="popup__input popup__input_type_url" placeholder="Ссылка на картинку" id="url-input" required>
+          <span class="popup__error url-input-error"></span>
+        </label>
         <button type="submit" class="button popup__button">Сохранить</button>
       </form>
     </div>
@@ -63,8 +75,6 @@
     </div>
   </div>
 </div>
-<script src="./scripts/cards.js"></script>
-<script src="./scripts/index.js" defer></script>
 
 <template id="card-template">
   <li class="places__item card">
@@ -77,5 +87,11 @@
     </div>
   </li>
 </template>
+
+<script type="module" src="components/validate.js" defer></script>
+<script type="module" src="components/modal.js" defer></script>
+<script type="module" src="components/cards.js" defer></script>
+<script type="module" src="components/card.js" defer></script>
+<script type="module" src="components/index.js" defer></script>
 </body>
 </html>
