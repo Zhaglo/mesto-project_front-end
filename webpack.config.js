@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
-        publicPath: '/mesto-project_front-end/'
+        publicPath: ''
     },
     mode: 'development',
     devServer: {

@@ -7,6 +7,7 @@
   background-size: cover;
   background-position: center;
   margin: 0 29px 0 0;
+  z-index: 2;
 }
 
 @media screen and (max-width: 740px) {
@@ -19,4 +20,20 @@
   .profile__image {
     margin-right: 0;
   }
+}
+
+.profile__image:hover + .profile__image_pen {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.profile__image:has(+ .profile__image_pen:hover) {
+  opacity: .2;
+  cursor: pointer;
+}
+
+.profile__image:hover {
+  opacity: .2;
+  cursor: pointer;
 }
