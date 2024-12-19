@@ -9,6 +9,7 @@
 @import url('../blocks/card/card.css');
 @import url('../blocks/card/__likes/card__likes.css');
 @import url('../blocks/card/__likes/_count/card__likes_count.css');
+@import url('../blocks/card/__delete-button/_noactive/card__delete-button_noactive.css');
 @import url('../blocks/profile/__image/profile__image.css');
 @import url('../blocks/profile/__image/_pen/profile__image_pen.css');
 @import url('../blocks/popup/popup.css');
