@@ -91,6 +91,8 @@ getCards()
     .catch(err => console.log(err))
 
 newCardPopup.addEventListener('click', () => {
+    cardLoc.value = '';
+    cardUrl.value = '';
     openModal(cardPopup);
 });
 
